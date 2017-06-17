@@ -1,0 +1,19 @@
+{
+  "name": "jiraclient",
+  "version": "1.0.0",
+  "description": "A cool electron jira client",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qisaw/jiraclient.git"
+  },
+  "author": "Wasiq Kashkari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qisaw/jiraclient/issues"
+  },
+  "homepage": "https://github.com/qisaw/jiraclient#readme"
+}
