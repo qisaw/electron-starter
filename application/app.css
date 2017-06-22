@@ -1,0 +1,16 @@
+:root {
+  --yellow: yellow;
+}
+body {
+  margin: 0;
+  @nest & * {
+    /*box-sizing makes sizing easier*/
+    box-sizing: border-box;
+  }
+}
+
+.hello {
+  background: var(--yellow);
+  display: flex;
+}
+
