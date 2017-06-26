@@ -2,13 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './application';
 import { AppContainer } from 'react-hot-loader';
+import { Provider } from "react-redux";
+
 import { isDevelopment } from './environment';
+import configureStore from "./createStore/configureStore";
+
+const store = configureStore();
 
 const wrapComponent = Component => {
   if(isDevelopment) {
     return (
       <AppContainer>
-        <Component/>
+        <Provider store={store}>
+          <Component/>
+        </Provider>
       </AppContainer>
     );
   }

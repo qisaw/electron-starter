@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import {actions} from "./actions";
 import styles from './app.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      val: 0,
-    }
-    this.increment = this.increment.bind(this);
-  }
-  increment() {
-    const { val } = this.state;
-    this.setState({ val: val + 1 });
-  }
-  render() {
-    return (
-      <div>
-        <button onClick={this.increment}>do something</button>
-        {this.state.val}
-      </div>
-    )
-  }
-}
+const App = ({value, increment}) => (
+  <div>
+    <button onClick={increment}>do something</button>
+    {value}
+  </div>
+);
 
-export default App;
+const mapStateToProps = state => ({
+  value: state.counter,
+});
+
+const mapDispatchToProps = dispatch => ({
+  increment: bindActionCreators(actions.increment, dispatch),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
