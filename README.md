@@ -2,6 +2,7 @@
 Desktop, electron JIRA client
 #start
 ``` bash
-NODE_ENV=dev npm run electron
-NODE_ENV=dev npm run dev-server
+npm run start
 ```
+
+This will run both `electron` and `webpack-dev-server`
