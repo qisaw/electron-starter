@@ -1,6 +1,7 @@
 # jiraclient
 Desktop, electron JIRA client
-#start
+
+### start
 ``` bash
 npm run start
 ```
