@@ -10,16 +10,19 @@ import configureStore from "./createStore";
 const store = configureStore();
 
 const wrapComponent = Component => {
+  const connectedApp = (
+    <Provider store={store}>
+      <Component/>
+    </Provider>
+  );
   if(isDevelopment) {
     return (
       <AppContainer>
-        <Provider store={store}>
-          <Component/>
-        </Provider>
+        {connectedApp}
       </AppContainer>
     );
   }
-  return <Component />;
+  return connectedApp;
 }
 const renderApp = Component => {
   ReactDOM.render( wrapComponent(Component), document.getElementById('root'));

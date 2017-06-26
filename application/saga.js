@@ -4,7 +4,6 @@ const delay = ms => new Promise(res => setTimeout(res, ms))
 
 function* incrementTimeout(action) {
   try {
-    console.log('run');
     yield delay(3000);
     yield put(actions.increment())
   }
