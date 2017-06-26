@@ -28,9 +28,8 @@ const renderApp = Component => {
 renderApp(App);
 
 if (module.hot) {
-  module.hot.accept(['./application', './createStore'], () => {
+  module.hot.accept('./application', () => {
     const NextApp = require('./application').default;
-    store.replaceReducer(require('./createStore/rootReducer').default);
     renderApp(NextApp);
   });
 }
