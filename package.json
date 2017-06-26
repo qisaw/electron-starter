@@ -4,6 +4,7 @@
   "description": "A cool electron jira client",
   "main": "index.js",
   "scripts": {
+    "start": "node dev.js",
     "electron": "electron .",
     "build": "webpack",
     "dev-server": "webpack-dev-server"
