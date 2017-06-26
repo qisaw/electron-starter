@@ -3,7 +3,7 @@ import { isDevelopment } from "../environment";
 
 import { take, fork, cancel } from 'redux-saga/effects';
 
-export const CANCEL_SAGAS_HMR = 'CANCEL_SAGAS_HMR';
+const CANCEL_SAGAS_HMR = 'CANCEL_SAGAS_HMR';
 
 // @TODO need to attempt a pause and resume instead of just stop and start
 const createAbortableSaga = saga => {
