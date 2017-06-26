@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import { Provider } from "react-redux";
 
 import { isDevelopment } from './environment';
-import configureStore from "./createStore/configureStore";
+import configureStore from "./createStore";
 
 const store = configureStore();
 
@@ -28,8 +28,9 @@ const renderApp = Component => {
 renderApp(App);
 
 if (module.hot) {
-  module.hot.accept('./application', () => {
+  module.hot.accept(['./application', './createStore'], () => {
     const NextApp = require('./application').default;
+    store.replaceReducer(require('./createStore/rootReducer').default);
     renderApp(NextApp);
   });
 }
