@@ -1,5 +1,5 @@
-# jiraclient
-Desktop, electron JIRA client
+# Electron Starter
+Desktop, electron starter
 
 ### start
 ``` bash
