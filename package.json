@@ -1,7 +1,7 @@
 {
-  "name": "jiraclient",
+  "name": "electronstarter",
   "version": "1.0.0",
-  "description": "A cool electron jira client",
+  "description": "A cool electron starter",
   "main": "index.js",
   "scripts": {
     "start": "node dev.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qisaw/jiraclient.git"
+    "url": "git+https://github.com/qisaw/electron-starter.git"
   },
   "author": "Wasiq Kashkari",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/qisaw/jiraclient/issues"
+    "url": "https://github.com/qisaw/electron-starter/issues"
   },
-  "homepage": "https://github.com/qisaw/jiraclient#readme",
+  "homepage": "https://github.com/qisaw/electron-starter#readme",
   "dependencies": {
     "electron": "^1.6.11",
     "react": "^15.6.1",
