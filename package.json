@@ -4,7 +4,7 @@
   "description": "A cool electron starter",
   "main": "index.js",
   "scripts": {
-    "start": "node dev.js",
+    "start": "node scripts/dev.js",
     "electron": "electron .",
     "build": "webpack",
     "dev-server": "webpack-dev-server"

@@ -19,7 +19,7 @@ let electron;
 let webpack;
 
 const stopEverything = () => {
-  process.stdout.write('\nEXITTING EVERYTHING\n');
+  process.stdout.write('\nEXITING EVERYTHING\n');
   if(webpack) {
     webpack.removeAllListeners('exit');
     webpack.kill();
